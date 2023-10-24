@@ -1,9 +1,5 @@
-
-
-
-
-
 import useQuizStore from "../stores/useQuizStore";
+import "./CurrentOptions.css";
 
 export const CurrentOptions = () => {
     // Retrieve the questions and current question index from the store
@@ -22,8 +18,7 @@ export const CurrentOptions = () => {
   const handleOptionClick = (index) => {
     // Check if an answer is already submitted for the current question
     if (selectedAnswerIndex !== undefined) {
-      // Provide feedback to the user if they attempt to answer a question again
-      alert("You have already answered this question.");
+      // Provide nothing to the user if they attempt to answer a question again
       return;
     }
 
@@ -31,9 +26,8 @@ export const CurrentOptions = () => {
     useQuizStore.getState().submitAnswer(question.id, index);
   };
 
-
   return (
-    <div>
+    <div className="options-container">
       {options.map((option, index) => (
         <button
           key={index}
