@@ -1,17 +1,18 @@
 import useQuizStore from "../stores/useQuizStore"
 
 export const NextButton = () => {
-    const nextQuestion = useQuizStore.getState().goToNextQuestion()
 
+    //Retrieve the goToNextFuntion-method from the main state "useQuizStore" and naming it "HandleNext"
+    const handleNext = () => {
+        useQuizStore.getState().goToNextQuestion()
+    }
 
-    const questions = useQuizStore((state) => state.questions);
-  const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
-    
-    console.log("Next button", nextQuestion)
     return (
-        <button type="button" onClick={nextQuestion}>
+        <>
+        <button type="button" onClick={handleNext}>
             Next
         </button>
+        </>
         
     )
 }
