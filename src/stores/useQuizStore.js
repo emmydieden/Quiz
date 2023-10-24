@@ -28,6 +28,10 @@ const useQuizStore = create((set) => ({
   submitAnswer: (questionId, answerIndex) => {
     const question = questions.find((q) => q.id === questionId);
 
+    //WE HAVE SENT THE CORRECT QUESTION ID AND ANSWER INDEX HERE!!!!
+    console.log("questionid", questionId)
+    console.log("answerIndex", answerIndex)
+
     // Error handling
     if (!question) {
       throw new Error("Could not find the question! Check to make sure you are passing the question id correctly.");
