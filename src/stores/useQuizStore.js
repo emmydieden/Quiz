@@ -41,6 +41,7 @@ const useQuizStore = create((set) => ({
       throw new Error(`You passed answerIndex ${answerIndex}, but it is not in the possible answers array!`);
     }
 
+
     // Update state with the user's answer
     set((state) => ({
       answers: [

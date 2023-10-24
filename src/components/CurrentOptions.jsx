@@ -1,86 +1,60 @@
-// import useQuizStore from "../stores/useQuizStore";
-
-
-// export const CurrentOptions = () => {
-//     const questions = useQuizStore((state) => state.questions)
-//     const currentQuestionIndex = useQuizStore(
-//         (state) => state.currentQuestionIndex
-//     );
-//     const question = questions[currentQuestionIndex];
-//     const options = question.options
-//     // const { submitAnswer } = useQuizStore()
-
-//     console.log("questionID:",question.id)
-    
-//     //useQuizStore.getState().submitAnswer(question.id, index)  ; //submitAnswer: (questionId, answerIndex)
-
-
-// const handleAnswerSelection = (answerIndex) => {
-//     // Get the question's ID
-//     const questionId = question.id;
-
-//     // Call the submitAnswer function from the store
-//     useQuizStore.getState().submitAnswer(questionId, answerIndex);
-//   };
 
 
 
-    
-//     return (
-//         <div>
-
-//             {options.map((option, index) => {
-//                 return (<button onClick={() => handleAnswerSelection(index)} key={index} type="radio" alt="option-button">{option}</button>)
-//             })}
-
-//         </div>
-//     )
-// }
 
 
 import useQuizStore from "../stores/useQuizStore";
 
 export const CurrentOptions = () => {
+    // Retrieve the questions and current question index from the store
   const questions = useQuizStore((state) => state.questions);
   const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
+
+  // Get the current question and its available options
   const question = questions[currentQuestionIndex];
   const options = question.options;
 
-  const submitAnswer = (answerIndex) => {
-    useQuizStore.getState().submitAnswer(question.id, answerIndex);
+  // Retrieve the selected answer index, whether it's correct, and the action to submit answers from the store
+  const selectedAnswerIndex = useQuizStore((state) => state.answers[currentQuestionIndex]?.answerIndex);
+  const isAnswerCorrect = useQuizStore((state) => state.answers[currentQuestionIndex]?.isCorrect);
+
+  // Handle the click event when an option is selected
+  const handleOptionClick = (index) => {
+    // Check if an answer is already submitted for the current question
+    if (selectedAnswerIndex !== undefined) {
+      // Provide feedback to the user if they attempt to answer a question again
+      alert("You have already answered this question.");
+      return;
+    }
+
+    // Submit the selected answer to the store
+    useQuizStore.getState().submitAnswer(question.id, index);
   };
 
-//  const isCorrect = () => {
-//     useQuizStore.getState().answers[currentQuestionIndex].isCorrect
-//  }
 
   return (
     <div>
-      <p>{question.questionText}</p>
-      {options.map((option, index) => {
-        return (
-          <button
-            key={index}
-            type="radio"
-            alt="option-button"
-            onClick={() => submitAnswer(index)}
-          >
-            {option}
-          </button>
-        );
-      })}
-
-      {useQuizStore.getState().answers.length > currentQuestionIndex ? (
-        useQuizStore.getState().answers[currentQuestionIndex].isCorrect ? (
-          <p>Correct Answer!</p>
-        ) : ( 
-          <p>Wrong Answer!</p>
-        )
-      ) : null} 
-      
+      {options.map((option, index) => (
+        <button
+          key={index}
+          type="button"
+          onClick={() => handleOptionClick(index)}
+          className={selectedAnswerIndex === index ? (isAnswerCorrect ? "correct" : "incorrect") : ""}
+        >
+          {option}
+        </button>
+      ))}
     </div>
   );
 };
+
+
+
+
+
+
+
+
 
 
 

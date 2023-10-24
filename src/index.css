@@ -27,3 +27,11 @@ code {
 .managed-component h1 {
   font-size: 1em;
 }
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
