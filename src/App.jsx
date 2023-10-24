@@ -1,5 +1,6 @@
 import { CurrentQuestionZustand } from "./components/CurrentQuestionZustand";
 import { CurrentOptions } from "./components/CurrentOptions";
+import { NextButton } from "./components/NextButton";
 
 
 export const App = () => {
@@ -8,6 +9,7 @@ export const App = () => {
 
       <CurrentQuestionZustand />
       <CurrentOptions />
+      <NextButton />
     </div>
 
   );
