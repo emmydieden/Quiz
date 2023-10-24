@@ -4,15 +4,38 @@ import { create } from "zustand";
 const questions = [
   {
     id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
-    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
-    correctAnswerIndex: 0,
+    questionHeading: `Geography`,
+    questionText: `Which country is known as the Land of the Rising Sun?`,
+    options: [`China`, `South Korea`, `Japan`, `Thailand`],
+    correctAnswerIndex: 2,
   },
   {
     id: 2,
-    questionText: "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018"],
-    correctAnswerIndex: 2,
+    questionHeading: `Heroes`,
+    questionText: `What is the alter ego of the superhero who dresses like a bat and has a butler named Alfred?`,
+    options: [`Superfly`, `Iron Man`, `Captain America`, `Batman`],
+    correctAnswerIndex: 3,
+  },
+  {
+    id: 3,
+    questionHeading: `Music`,
+    questionText: `Which rock band is famous for their hit song "Bohemian Rhapsody"?`,
+    options: [`The Rolling Stones`, `The Beatles`, `Led Zeppelin`, `Queen`],
+    correctAnswerIndex: 3,
+  },
+  {
+    id: 4,
+    questionHeading: `Biology`,
+    questionText: `Which of these creatures are known for its incredible memory?`,
+    options: [`Goldfish`, `Elephant`, `Squirrel`, `Jellyfish`],
+    correctAnswerIndex: 1,
+  },
+  {
+    id: 5,
+    questionHeading: `Science`,
+    questionText: `What is the smallest unit of matter?`,
+    options: [`Atom`, `Molecule`, `Cell`, `Quark`],
+    correctAnswerIndex: 0,
   },
 ];
 
