@@ -1,11 +1,11 @@
 
-.next-button-container {
+.button-container {
     display: flex;
     justify-content: flex-end;
 }
 
 
-.next-button-container button {
+.button-container button {
     background-color: white;
     color: blue;
     border: none; 

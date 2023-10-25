@@ -2,4 +2,14 @@
 .question-counter-wrapper {
     display: flex;
     justify-content: flex-end;
+    
 }
+
+.question-counter-wrapper p {
+    font-size: 15px; 
+}
+
+p {
+    font-size: 20px;
+}
+

@@ -1,3 +1,5 @@
+//This component is mounted in the page 'Questions.jsx'
+
 import useQuizStore from "../stores/useQuizStore";
 import "./CurrentOptions.css";
 

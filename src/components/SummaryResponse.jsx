@@ -1,4 +1,4 @@
-// Page for the summary which is shown after all questions are answered.
+// Page for the summary which is shown after all questions are answered. This component is mounted in the page 'Summary.jsx'
 
 import useQuizStore from "../stores/useQuizStore";
 

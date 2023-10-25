@@ -1,3 +1,5 @@
+// This component is mounted in the page 'Questions.jsx'
+
 import useQuizStore from "../stores/useQuizStore";
 import "./CurrentQuestion.css";
 
@@ -22,7 +24,8 @@ export const CurrentQuestionZustand = () => {
             <div className="question-counter-wrapper">
               <p>Question {currentQuestionIndex + 1}/5</p>
             </div>
-            <h1>{question.questionText}</h1>
+            <h1>{question.questionHeading}</h1> 
+            <p>{question.questionText}</p>
         </div>
     );
 };
