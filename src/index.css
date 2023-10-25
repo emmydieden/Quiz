@@ -1,29 +1,30 @@
 :root {
-  margin: 0;
-  font-family: "Poppins",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #ced3fd;
 }
 
 /* Components Structure */
-.managed-component {
-  outline: 1px solid red;
+.question-card {
   padding: 2em;
   margin-bottom: 1em;
   font-size: 1em;
-}
-.managed-component h2 {
-  text-align: center;
-  font-size: 1.5em;
-}
-.managed-component h1 {
-  font-size: 1em;
+  background-color: white;
+  border-radius: 0.3rem;
 }
 

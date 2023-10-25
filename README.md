@@ -1,8 +1,3 @@
-<h1 align="center">
-  <a href="">
-    <img src="/src/assets/quiz.svg" alt="Project Banner Image">
-  </a>
-</h1>
 
 # State Management Quiz
 
@@ -10,7 +5,7 @@ Replace this readme with your own information about your project.
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## Getting Started with the Project
+Förklara strukturen på components/pages kort här?
 
 ### Dependency Installation & Startup Development Server
 
@@ -25,6 +20,8 @@ npm i && code . && npm run dev
 ### The Problem
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+ChatGpt: help with comments.
 
 ### View it live
 

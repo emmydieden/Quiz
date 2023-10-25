@@ -4,6 +4,7 @@ import useQuizStore from "../stores/useQuizStore";
 import { CurrentQuestionZustand } from "../components/CurrentQuestionZustand";
 import { CurrentOptions } from "../components/CurrentOptions";
 import { NextButton } from "../components/NextButton";
+import { Link } from "react-router-dom";
 
 
 
@@ -17,8 +18,7 @@ export const Questions = () => {
     <>
     <CurrentQuestionZustand />
     <CurrentOptions />
-    {}
-    <NextButton />
+    {quizOver ? <Link to="/summary"><button>END</button> </Link> : <NextButton />}
     </>
   )
 }

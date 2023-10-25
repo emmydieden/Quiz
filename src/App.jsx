@@ -5,6 +5,7 @@ export const App = () => {
   return (
     <>
      <BrowserRouter>
+     <h2>QUIZ</h2>
      <Routes>
       {routes}
      </Routes>
