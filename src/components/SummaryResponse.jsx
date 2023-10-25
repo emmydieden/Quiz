@@ -24,22 +24,22 @@ export const SummaryResponse = () => {
     let summaryHeading = "";
     let summaryParagraph = "";
     //Determines the summary response based on the number of correct answers
-    if (sumOfCorrectAnswers === 0) {
-        summaryHeading = `You’re a real winner!`
-        summaryParagraph = `Not! You got no questions right...Better luck next time!`
+    if (sumOfCorrectAnswers === 0 || sumOfCorrectAnswers === 2) {
+        summaryHeading = `You’re a real winner!`;
+        summaryParagraph = `Not! You got ${sumOfCorrectAnswers} questions right...Better luck next time!`;
         
-    } else if(sumOfCorrectAnswers === 1 || sumOfCorrectAnswers === 2) {
-        summaryHeading = `You’re a real winner!`
-         summaryParagraph= `Not! You only got ${sumOfCorrectAnswers} question right... Better luck next time!`;
+    } else if(sumOfCorrectAnswers === 1 ) {
+        summaryHeading = `You’re a real winner!`;
+        summaryParagraph= `Not! You only got ${sumOfCorrectAnswers} question right... Better luck next time!`;
     } else if (sumOfCorrectAnswers === 3) {
-            summaryHeading =`Almost there!`;
-            summaryParagraph= `You got ${sumOfCorrectAnswers} questions right. But... try again, we think you can do better!`
+        summaryHeading =`Almost there!`;
+        summaryParagraph= `You got ${sumOfCorrectAnswers} questions right. But... try again, we think you can do better!`;
     } else if (sumOfCorrectAnswers === 4) {
-        summaryHeading = "Great!"
+        summaryHeading = "Great!";
         summaryParagraph = `You almost got them all! You got ${sumOfCorrectAnswers} of 5 questions right. Keep on trying! `;
     } else {
-        summaryHeading = "Amazing!"
-        summaryParagraph = `You must be a genius! You got all ${sumOfCorrectAnswers} questions right!`
+        summaryHeading = "Amazing!";
+        summaryParagraph = `You must be a genius! You got all ${sumOfCorrectAnswers} questions right!`;
     }
 
     // Render the summary response and the number of correct answers

@@ -22,7 +22,8 @@ body {
   background-color: #ced3fd;
   display: flex;
   align-items: center;
-  height: 100vh;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 
@@ -74,3 +75,64 @@ header h1 {
     gap: 5px;
 }
 
+/* ---- Meadia query ----- */
+@media (min-width: 744px) and (max-width: 1023px) {
+  .options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .app-content-wrapper {
+    padding: 30px;
+    width: 600px;
+  }
+    .summary-page {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+  .question-card {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-content-wrapper {
+    width: 150vh;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+    header {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  
+    .button-container {
+      grid-column-end: 3;
+    }
+
+    .summary-page {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      align-items: center;
+    }
+
+    .summary-card{
+    width: 100vh;
+    align-items: center;
+  }
+
+    .question-card {
+      text-align: center;
+      
+    }
+}

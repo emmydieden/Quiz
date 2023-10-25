@@ -1,5 +1,5 @@
 //Component is mounted in 'Questions.jsx'
-import React from "react";
+
 import { Link } from "react-router-dom";
 
 import "./Button.css";
