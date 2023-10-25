@@ -1,10 +1,6 @@
 import useQuizStore from "../stores/useQuizStore";
 
-export const Summary = () => {
-
-    const handleRestart = () => {
-        useQuizStore.getState().restart();
-    };
+export const SummaryResponse = () => {
 
     const answers = useQuizStore((state) => state.answers);
 
@@ -39,9 +35,6 @@ export const Summary = () => {
     return (
         <>
             <h2>{summaryResponse}</h2>
-            <button type="button" onClick={handleRestart}>
-                Restart
-            </button>
         </>
     )
 };

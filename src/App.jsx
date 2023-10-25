@@ -1,17 +1,14 @@
-import { CurrentQuestionZustand } from "./components/CurrentQuestionZustand";
-import { CurrentOptions } from "./components/CurrentOptions";
-import { NextButton } from "./components/NextButton";
-import { Summary } from "./components/Summary";
-
+import { BrowserRouter, Routes } from "react-router-dom";
+import { routes } from "./routes/routes"
 
 export const App = () => {
   return (
-    <div>
-      <CurrentQuestionZustand />
-      <CurrentOptions />
-      <NextButton />
-      <Summary />
-    </div>
-
+    <>
+     <BrowserRouter>
+     <Routes>
+      {routes}
+     </Routes>
+     </BrowserRouter>
+    </>
   );
 };
