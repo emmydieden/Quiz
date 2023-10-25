@@ -1,6 +1,5 @@
 //This page is set as the 'home' page
 
-import React from "react";
 import useQuizStore from "../stores/useQuizStore";
 
 import { CurrentQuestionZustand } from "../components/CurrentQuestionZustand";
@@ -9,7 +8,11 @@ import { NextButton } from "../components/Buttons/NextButton";
 import { ToSummaryButton } from "../components/Buttons/ToSummaryButton";
 
 export const Questions = () => {
+    
+    
     const quizOver = useQuizStore((state) => state.quizOver);
+    const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
+    const totalQuestions = useQuizStore((state) => state.questions.length);
 
     console.log("is quiz over", quizOver);
 
@@ -17,7 +20,12 @@ export const Questions = () => {
         <>
             <CurrentQuestionZustand />
             <CurrentOptions />
-            {quizOver ? <ToSummaryButton /> : <NextButton />}
+            {/* Conditionally render either the "Summary" button or the "Next" button */}
+            {quizOver || currentQuestionIndex === (totalQuestions - 1) ? ( 
+            // If the quiz is over or it's the last question, show the "Summary" button
+            <ToSummaryButton /> ) : (
+            // If the quiz is not over and it's not the last question, show the "Next" button
+            <NextButton />)}
         </>
     );
 };

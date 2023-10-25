@@ -21,25 +21,32 @@ export const SummaryResponse = () => {
     console.log("Total Correct Answers:", sumOfCorrectAnswers);
 
     // Initalizing a variable to store the summary response
-    let summaryResponse = "";
+    let summaryHeading = "";
+    let summaryParagraph = "";
     //Determines the summary response based on the number of correct answers
-    if (sumOfCorrectAnswers === 0 || sumOfCorrectAnswers === 1) {
-        summaryResponse =
-            "Oups, maybe you should read up a bit and try again, you can do it!";
-    } else if (sumOfCorrectAnswers === 2 || sumOfCorrectAnswers === 3) {
-        summaryResponse =
-            "Almost there! But... try again, we think you can do better!";
+    if (sumOfCorrectAnswers === 0) {
+        summaryHeading = `You’re a real winner!`
+        summaryParagraph = `Not! You got no questions right...Better luck next time!`
+        
+    } else if(sumOfCorrectAnswers === 1 || sumOfCorrectAnswers === 2) {
+        summaryHeading = `You’re a real winner!`
+         summaryParagraph= `Not! You only got ${sumOfCorrectAnswers} question right... Better luck next time!`;
+    } else if (sumOfCorrectAnswers === 3) {
+            summaryHeading =`Almost there!`;
+            summaryParagraph= `You got ${sumOfCorrectAnswers} questions right. But... try again, we think you can do better!`
     } else if (sumOfCorrectAnswers === 4) {
-        summaryResponse = "Great! Almost all correct!";
+        summaryHeading = "Great!"
+        summaryParagraph = `You almost got them all! You got ${sumOfCorrectAnswers} of 5 questions right. Keep on trying! `;
     } else {
-        summaryResponse = "Amazing! You're a genius!";
+        summaryHeading = "Amazing!"
+        summaryParagraph = `You must be a genius! You got all ${sumOfCorrectAnswers} questions right!`
     }
 
     // Render the summary response and the number of correct answers
     return (
-        <>
-            <h2>{summaryResponse}</h2>
-            <p>{sumOfCorrectAnswers}/5 correct answers!</p>
-        </>
+      <div className="summary-card">
+        <h1>{summaryHeading}</h1>
+        <p>{summaryParagraph}</p>
+      </div>
     );
 };

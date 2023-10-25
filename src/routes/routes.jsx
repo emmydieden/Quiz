@@ -5,7 +5,6 @@ import { Route } from "react-router-dom"
 import { Questions } from "../pages/Questions";
 import { Summary } from "../pages/Summary";
 
-import React from 'react'
 
 export const routes = (
     <>
