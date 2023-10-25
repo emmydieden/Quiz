@@ -1,8 +1,10 @@
+//Component is mounted in 'Questions.jsx'
 import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Button.css";
 
+// Defines a functional component named ToSummaryButton with link to the "/summary" route
 export const ToSummaryButton = () => {
   return (
     <div className="button-container">
