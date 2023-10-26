@@ -5,7 +5,7 @@ const questions = [
   {
     id: 1,
     questionHeading: `Geography`,
-    imageURL: `/geography.jpg`,
+    imageURL: `/sunrise.jpg`,
     questionText: `Which country is known as the Land of the Rising Sun?`,
     options: [`China`, `South Korea`, `Japan`, `Thailand`],
     correctAnswerIndex: 2,
@@ -13,7 +13,7 @@ const questions = [
   {
     id: 2,
     questionHeading: `Heroes`,
-    imageURL: `/comics.jpg`,
+    imageURL: `/superhero.jpg`,
     questionText: `What is the alter ego of the superhero who dresses like a bat and has a butler named Alfred?`,
     options: [`Superfly`, `Iron Man`, `Captain America`, `Batman`],
     correctAnswerIndex: 3,

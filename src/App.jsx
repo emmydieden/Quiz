@@ -8,9 +8,6 @@ export const App = () => {
     <>
      <BrowserRouter>
      <div className="app-content-wrapper">
-     <header>
-     <h1>QUIZ</h1>
-     </header>
      <Routes>
       {routes}
      </Routes>

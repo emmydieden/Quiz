@@ -17,7 +17,10 @@ export const Questions = () => {
     console.log("is quiz over", quizOver);
 
     return (
-        <>
+        <div className="questions-content-wrapper">
+            <header>
+                <h1>QUIZ</h1>
+            </header>
             <CurrentQuestionZustand />
             <CurrentOptions />
             {/* Conditionally render either the "Summary" button or the "Next" button */}
@@ -26,6 +29,6 @@ export const Questions = () => {
             <ToSummaryButton /> ) : (
             // If the quiz is not over and it's not the last question, show the "Next" button
             <NextButton />)}
-        </>
+        </div>
     );
 };

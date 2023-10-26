@@ -7,7 +7,7 @@ import "./Button.css";
 // Defines a functional component named ToSummaryButton with link to the "/summary" route
 export const ToSummaryButton = () => {
   return (
-    <div className="button-container">
+    <div className="button-container finish-button">
     <Link to="/summary">
         <button>Finish</button>
     </Link>

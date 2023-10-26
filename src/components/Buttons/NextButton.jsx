@@ -25,7 +25,7 @@ export const NextButton = () => {
 
   return (
     
-    <div className="button-container"> 
+    <div className="button-container next-button"> 
       <button className="btn-donate" type="button" onClick={handleNext} disabled={selectedAnswerIndex === undefined}> 
         Next
       </button>

@@ -35,33 +35,39 @@ header {
 header h1 {
   font-family: "Monoton";
   font-size: 60px;
-  line-height: 60px
+  line-height: 60px;
+}
+
+h1 {
+  font-size: 24px;
 }
 
 .summary-card h1 {
   line-height: 40px
 }
 
-.app-content-wrapper {
-  margin: 1rem; 
-  display: flex;
+.summary-page {
+  display: flex; 
   flex-direction: column;
   gap: 1rem; 
-
 }
+
+
+.app-content-wrapper {
+  width: 350px;
+}
+ 
+
+.questions-content-wrapper {
+  margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
 
 /* Components Structure */
-.question-card {
-  display: flex;
-  flex-direction: column;
-  padding: 2em;
-  font-size: 1em;
-  background-color: white;
-  border-radius: 0.3rem;
-  height: 275px; 
-  gap: 5px; 
-}
-
 .summary-card {
   display: flex;
   flex-direction: column;
@@ -101,39 +107,50 @@ header h1 {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .app-content-wrapper {
-    width: 100vh;
-    height: 100vh;
+  .questions-content-wrapper {
+    
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     grid-column-gap: 50px;
-    margin: 8rem;
+    /* margin: 8rem; */
+    align-items: center;
   }
+
+    .app-content-wrapper {
+    width: 100vh;
+    height: 100vh;
+    
+    }
 
     header {
       grid-column-start: 1;
       grid-column-end: 3;
     }
   
-    .button-container {
+    .next-button  {
       grid-column-end: 3;
       align-self: start; 
     }
 
-    .summary-page {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      grid-column-start: 1;
-      grid-column-end: 3;
-      align-items: center;
-    }
+        .finish-button {
+          grid-column-end: 3;
+          align-self: start; 
+        }
+    
+
+         .summary-page {
+           display: flex;
+           flex-direction: column;
+           gap: 1rem;
+          
+         }
 
     .summary-card{
     width: 100vh;
     align-items: center;
+    margin-top: 8rem;
   }
 
     .question-card {

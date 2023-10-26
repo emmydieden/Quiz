@@ -21,12 +21,13 @@ export const CurrentQuestionZustand = () => {
     // Render the current question and question number
     return (
         <div className="question-card">
-            <div className="question-counter-wrapper">
-              <p>Question {currentQuestionIndex + 1}/5</p>
+            <div className="question-counter-heading-wrapper">
+                <h1>{question.questionHeading}</h1>
+                <p>Question {currentQuestionIndex + 1}/5</p>
             </div>
-            <h1>{question.questionHeading}</h1> 
-            <p>{question.questionText}</p>
             <img src={question.imageURL} alt="Sunrise" />
+            <p>{question.questionText}</p>
+            
         </div>
     );
 };
