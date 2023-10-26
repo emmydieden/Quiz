@@ -11,6 +11,9 @@ export const CurrentOptions = () => {
   // Get the current question and its available options
   const question = questions[currentQuestionIndex];
   const options = question.options;
+  const correctAnswerIndex = question.correctAnswerIndex;
+
+  console.log("correct:", correctAnswerIndex )
 
   // Retrieve the selected answer index, whether it's correct, and the action to submit answers from the store
   const selectedAnswerIndex = useQuizStore((state) => state.answers[currentQuestionIndex]?.answerIndex);
@@ -34,7 +37,19 @@ export const CurrentOptions = () => {
           key={index}
           type="button"
           onClick={() => handleOptionClick(index)}
-          className={selectedAnswerIndex === index ? (isAnswerCorrect ? "correct" : "incorrect") : ""}
+          className={
+            // Check if the current button corresponds to the answer the user has selected
+            selectedAnswerIndex === index
+              ? isAnswerCorrect
+                ? "correct" // If the selected answer is correct, apply the "correct" class
+                : "incorrect" // If the selected answer is incorrect, apply the "incorrect" class
+              : 
+              // Check if the current button corresponds to the correct answer and the user has made a selection
+              index === correctAnswerIndex && selectedAnswerIndex !== undefined
+                ? "correct" // Turn the correct answer green when user clicks the wrong answer
+                : "" // If none of the above conditions are met, no class is applied
+          }
+          
         >
           {option}
         </button>

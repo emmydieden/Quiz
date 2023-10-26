@@ -5,6 +5,7 @@ const questions = [
   {
     id: 1,
     questionHeading: `Geography`,
+    imageURL: `/geography.jpg`,
     questionText: `Which country is known as the Land of the Rising Sun?`,
     options: [`China`, `South Korea`, `Japan`, `Thailand`],
     correctAnswerIndex: 2,
@@ -12,6 +13,7 @@ const questions = [
   {
     id: 2,
     questionHeading: `Heroes`,
+    imageURL: `/comics.jpg`,
     questionText: `What is the alter ego of the superhero who dresses like a bat and has a butler named Alfred?`,
     options: [`Superfly`, `Iron Man`, `Captain America`, `Batman`],
     correctAnswerIndex: 3,
@@ -19,6 +21,7 @@ const questions = [
   {
     id: 3,
     questionHeading: `Music`,
+    imageURL: `/music.jpg`,
     questionText: `Which rock band is famous for their hit song "Bohemian Rhapsody"?`,
     options: [`The Rolling Stones`, `The Beatles`, `Led Zeppelin`, `Queen`],
     correctAnswerIndex: 3,
@@ -26,6 +29,7 @@ const questions = [
   {
     id: 4,
     questionHeading: `Biology`,
+    imageURL: `/minne.png`,
     questionText: `Which of these creatures are known for its incredible memory?`,
     options: [`Goldfish`, `Elephant`, `Squirrel`, `Jellyfish`],
     correctAnswerIndex: 1,
@@ -33,6 +37,7 @@ const questions = [
   {
     id: 5,
     questionHeading: `Science`,
+    imageURL: `/science.jpg`,
     questionText: `What is the smallest unit of matter?`,
     options: [`Atom`, `Molecule`, `Cell`, `Quark`],
     correctAnswerIndex: 0,

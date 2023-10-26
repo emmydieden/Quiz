@@ -75,16 +75,17 @@ header h1 {
     gap: 5px;
 }
 
-/* ---- Meadia query ----- */
+/* ---- Media query ----- */
+/* Tablet */
 @media (min-width: 744px) and (max-width: 1023px) {
   .options-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 
   .app-content-wrapper {
-    padding: 30px;
+    margin: 8rem;
     width: 600px;
   }
     .summary-page {
@@ -98,14 +99,17 @@ header h1 {
   }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
   .app-content-wrapper {
-    width: 150vh;
+    width: 100vh;
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    grid-column-gap: 50px;
+    margin: 8rem;
   }
 
     header {
@@ -115,6 +119,7 @@ header h1 {
   
     .button-container {
       grid-column-end: 3;
+      align-self: start; 
     }
 
     .summary-page {

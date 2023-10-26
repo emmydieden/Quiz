@@ -26,6 +26,7 @@ export const CurrentQuestionZustand = () => {
             </div>
             <h1>{question.questionHeading}</h1> 
             <p>{question.questionText}</p>
+            <img src={question.imageURL} alt="Sunrise" />
         </div>
     );
 };
