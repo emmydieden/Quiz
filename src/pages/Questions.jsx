@@ -6,6 +6,10 @@ import { CurrentQuestionZustand } from "../components/CurrentQuestionZustand";
 import { CurrentOptions } from "../components/CurrentOptions";
 import { NextButton } from "../components/Buttons/NextButton";
 import { ToSummaryButton } from "../components/Buttons/ToSummaryButton";
+import { Timer } from "../components/Timer";
+
+
+
 
 export const Questions = () => {
     
@@ -29,6 +33,7 @@ export const Questions = () => {
             <ToSummaryButton /> ) : (
             // If the quiz is not over and it's not the last question, show the "Next" button
             <NextButton />)}
+            <Timer />
         </div>
     );
 };

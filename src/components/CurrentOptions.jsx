@@ -4,7 +4,7 @@ import useQuizStore from "../stores/useQuizStore";
 import "./CurrentOptions.css";
 
 export const CurrentOptions = () => {
-    // Retrieve the questions and current question index from the store
+  // Retrieve the questions and current question index from the store
   const questions = useQuizStore((state) => state.questions);
   const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
 
@@ -13,10 +13,9 @@ export const CurrentOptions = () => {
   const options = question.options;
   const correctAnswerIndex = question.correctAnswerIndex;
 
-  console.log("correct:", correctAnswerIndex )
-
   // Retrieve the selected answer index, whether it's correct, and the action to submit answers from the store
   const selectedAnswerIndex = useQuizStore((state) => state.answers[currentQuestionIndex]?.answerIndex);
+  
   const isAnswerCorrect = useQuizStore((state) => state.answers[currentQuestionIndex]?.isCorrect);
 
   // Handle the click event when an option is selected

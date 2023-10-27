@@ -6,11 +6,8 @@ export const SummaryResponse = () => {
     //Retrieve the user's answers from the quiz store
     const answers = useQuizStore((state) => state.answers);
 
-    //Log to see the user's answers to the console
-    console.log("answers:", answers);
-
     //Creating a variable to hold number of correct answers
-    //Reduce uses isCorrect from every object in the array and combines the incorrect to a single result
+    //Reduce users isCorrect from every object in the array and combines the incorrect to a single result
     // Calculate the sum of correct answers from an array of answer objects
     const sumOfCorrectAnswers = answers.reduce((total, answer) => {
         // Check if the current answer is correct, if it is correct, add 1 to the total; otherwise, add 0
