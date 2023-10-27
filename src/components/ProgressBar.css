@@ -10,11 +10,11 @@
     background-color: blue; /* Color of the progress indicator */
     height: 100%; 
     transition: width 0.3s;
-    margin-left: 10px;
     display: flex;
     align-items: center;
 }
 
 .progress-bar .progress p {
+    margin-left: 10px;
     color: white;
 }
