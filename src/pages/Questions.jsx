@@ -23,8 +23,8 @@ export const Questions = () => {
 
     return (
         <>
+        <ProgressBar />
         <div className="questions-content-wrapper">
-            <ProgressBar />
             <CurrentQuestionZustand />
         </div>
         <div className="options-content-wrapper">

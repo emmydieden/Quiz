@@ -29,9 +29,9 @@
 }
 
 @media (min-width: 1024px) {
-   .options-container button {
-    padding: 0.8rem;
-   }
+    .options-container button {
+        padding: 1rem;
+    }
 }
 
 /* --- Animation ---- */
@@ -66,7 +66,7 @@
 }
 
 .options-container button::before {
-    content: '';
+    content: "";
     display: block;
     width: 0px;
     height: 86%;
@@ -122,5 +122,4 @@
     transition: -webkit-box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in, -webkit-box-shadow 0.2s ease-in;
-   
-} 
+}

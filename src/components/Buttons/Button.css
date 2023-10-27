@@ -20,6 +20,16 @@
     justify-content: center;
 }
 
+.start-button {
+    display: flex;
+    justify-content: center;
+}
+
+.start-button button {
+    background-color: blue;
+    color: white;
+}
+
 
 
 

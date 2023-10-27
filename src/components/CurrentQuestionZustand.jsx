@@ -22,9 +22,8 @@ export const CurrentQuestionZustand = () => {
     return (
         <div className="question-card">
             
-            <div className="question-counter-heading-wrapper">
+            <div className="question-heading-wrapper">
                 <h1>{question.questionHeading}</h1>
-                
                 {/* <p>Question {currentQuestionIndex + 1}/5</p> */}
             </div>
             <img src={question.imageURL} alt="Sunrise" />
