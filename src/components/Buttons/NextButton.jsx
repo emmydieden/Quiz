@@ -4,6 +4,7 @@ import useQuizStore from "../../stores/useQuizStore";
 import "./Button.css";
 import { Timer } from "../Timer";
 
+
 export const NextButton = () => {
 
 //----- New code ---------
@@ -23,16 +24,16 @@ export const NextButton = () => {
     // If no option is selected, do nothing (button remains disabled).
   }
 
-  console.log(Timer)
 
 
   return (
-    
+    <>
     <div className="button-container next-button"> 
       <button className="btn-donate" type="button" onClick={handleNext} disabled={selectedAnswerIndex === undefined}> 
         Next
       </button>
     </div>
+    </>
   );
 }
 

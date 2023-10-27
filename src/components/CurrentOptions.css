@@ -28,12 +28,10 @@
     background-color: red;
 }
 
-.options-container .correct, .options-container .incorrect {
-    
-} 
-
-.chosen {
-    border: solid 5px aqua;
+@media (min-width: 1024px) {
+   .options-container button {
+    padding: 0.8rem;
+   }
 }
 
 /* --- Animation ---- */

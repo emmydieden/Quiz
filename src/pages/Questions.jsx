@@ -4,11 +4,10 @@ import useQuizStore from "../stores/useQuizStore";
 
 import { CurrentQuestionZustand } from "../components/CurrentQuestionZustand";
 import { CurrentOptions } from "../components/CurrentOptions";
+import { ProgressBar } from "../components/ProgressBar/ProgressBar";
 import { NextButton } from "../components/Buttons/NextButton";
 import { ToSummaryButton } from "../components/Buttons/ToSummaryButton";
 import { Timer } from "../components/Timer";
-
-
 
 
 export const Questions = () => {
@@ -20,13 +19,17 @@ export const Questions = () => {
 
     console.log("is quiz over", quizOver);
 
+    
+
     return (
+        <>
         <div className="questions-content-wrapper">
-            <header className="question-header-h1">
-                <h1>QUIZ</h1>
-            </header>
+            <ProgressBar />
             <CurrentQuestionZustand />
+        </div>
+        <div className="options-content-wrapper">
             <CurrentOptions />
+        </div>
             {/* Conditionally render either the "Summary" button or the "Next" button */}
             {quizOver || currentQuestionIndex === (totalQuestions - 1) ? ( 
             // If the quiz is over or it's the last question, show the "Summary" button
@@ -34,6 +37,7 @@ export const Questions = () => {
             // If the quiz is not over and it's not the last question, show the "Next" button
             <NextButton />)}
             <Timer />
-        </div>
+        
+        </>
     );
 };

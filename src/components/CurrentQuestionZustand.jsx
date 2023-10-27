@@ -1,7 +1,6 @@
 // This component is mounted in the page 'Questions.jsx'
 
 import useQuizStore from "../stores/useQuizStore";
-import { ProgressBar } from "../components/ProgressBar";
 import "./CurrentQuestion.css";
 
 export const CurrentQuestionZustand = () => {
@@ -22,9 +21,10 @@ export const CurrentQuestionZustand = () => {
     // Render the current question and question number
     return (
         <div className="question-card">
+            
             <div className="question-counter-heading-wrapper">
                 <h1>{question.questionHeading}</h1>
-                <ProgressBar />
+                
                 {/* <p>Question {currentQuestionIndex + 1}/5</p> */}
             </div>
             <img src={question.imageURL} alt="Sunrise" />

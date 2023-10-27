@@ -1,7 +1,7 @@
 .progress-bar {
-    width: 50%; 
-    background-color: #ced3fd; /* Background color of the progress bar container */
-    height: 20px;
+    width: 100%; 
+    background-color: white; /* Background color of the progress bar container */
+    height: 10px;
     border-radius: 10px; 
     overflow: hidden; /* Hide overflowing progress */
 }

@@ -1,4 +1,4 @@
-import useQuizStore from "../stores/useQuizStore";
+import useQuizStore from "../../stores/useQuizStore";
 
 import "./ProgressBar.css"
 
@@ -18,7 +18,7 @@ export const ProgressBar = () => {
   return (
     <div className="progress-bar">
         <div className="progress" style={{ width: `${progress}%`}}>
-            <p>{progress.toFixed(1)}%</p>
+            {/* <p>{progress.toFixed(1)}%</p> */}
         </div>
     </div>
   )

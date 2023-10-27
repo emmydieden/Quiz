@@ -102,7 +102,9 @@ const useQuizStore = create((set) => ({
         return { quizOver: true };
       } else {
         // Otherwise, move to the next question
-        return { currentQuestionIndex: state.currentQuestionIndex + 1 };
+        return { 
+          currentQuestionIndex: state.currentQuestionIndex + 1
+        } 
       }
     });
   },
@@ -117,6 +119,7 @@ const useQuizStore = create((set) => ({
       quizOver: false,
     });
   },
+
 }));
 
 // Export the useQuizStore as the default export
