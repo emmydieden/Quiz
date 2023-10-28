@@ -39,11 +39,14 @@ export const SummaryResponse = () => {
         summaryParagraph = `You must be a genius! You got all ${sumOfCorrectAnswers} questions right!`;
     }
 
+    const seconds = useQuizStore((state) => state.seconds);
+
     // Render the summary response and the number of correct answers
     return (
       <div className="summary-card">
         <h1>{summaryHeading}</h1>
         <p>{summaryParagraph}</p>
+        <p>Your time was {seconds} seconds!</p>
       </div>
     );
 };

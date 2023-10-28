@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { create } from "zustand";
 
 
@@ -48,7 +49,7 @@ const questions = [
 
 // Create a Zustand store named useQuizStore
 // This is the main state store for the quiz. It contains the variable "questions", an array empty for the answers, a default index of 0 for the "currentQuestionIndex" and a default state of false for the variable "quizOver"
-const useQuizStore = create((set) => ({
+const useQuizStore = create((set, get) => ({
   // Initial state of the store
   questions,                  // Array of quiz questions
   answers: [],                // Array to store user's answers
@@ -118,6 +119,26 @@ const useQuizStore = create((set) => ({
       currentQuestionIndex: 0,
       quizOver: false,
     });
+  },
+
+  seconds: 0,
+  finished: false,
+  counter: null,
+
+  startCounter: () => {
+    set({finished: false});
+    const counter = setInterval(() => {
+      set((state) => ({ seconds: state.seconds +1}));
+    }, 1000);
+    set({counter});
+    return counter; 
+  },
+
+  stopCounter: () => {
+    const { counter } = get();
+    clearInterval(counter);
+    set({ finished: true});
+    console.log("hejcounter!");
   },
 
 }));

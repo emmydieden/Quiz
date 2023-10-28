@@ -16,6 +16,7 @@ export const Questions = () => {
     const quizOver = useQuizStore((state) => state.quizOver);
     const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
     const totalQuestions = useQuizStore((state) => state.questions.length);
+    const seconds = useQuizStore((state) => state.seconds);
 
     console.log("is quiz over", quizOver);
 
@@ -37,7 +38,7 @@ export const Questions = () => {
             // If the quiz is not over and it's not the last question, show the "Next" button
             <NextButton />)}
             <Timer />
-        
+            <p>Your time: {seconds} seconds</p>
         </>
     );
 };
