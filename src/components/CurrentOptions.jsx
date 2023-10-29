@@ -8,6 +8,9 @@ export const CurrentOptions = () => {
   const questions = useQuizStore((state) => state.questions);
   const currentQuestionIndex = useQuizStore((state) => state.currentQuestionIndex);
 
+  //TIMER!!
+  // const isTimeOver = useQuizStore((state) => state.isTimeOver)
+
   // Get the current question and its available options
   const question = questions[currentQuestionIndex];
   const options = question.options;
@@ -21,10 +24,11 @@ export const CurrentOptions = () => {
   // Handle the click event when an option is selected
   const handleOptionClick = (index) => {
     // Check if an answer is already submitted for the current question
-    if (selectedAnswerIndex !== undefined) {
+    // || isTimeOver this could be included in the if statement below to disable options when time is up.
+    if (selectedAnswerIndex !== undefined  ) {
       // Provide nothing to the user if they attempt to answer a question again
      return;
-    }
+    } 
     // Submit the selected answer to the store
     useQuizStore.getState().submitAnswer(question.id, index);
   };
@@ -47,8 +51,7 @@ export const CurrentOptions = () => {
               index === correctAnswerIndex && selectedAnswerIndex !== undefined
                 ? "correct" // Turn the correct answer green when user clicks the wrong answer
                 : "" // If none of the above conditions are met, no class is applied
-          }
-          
+          } 
         >
           {option}
         </button>

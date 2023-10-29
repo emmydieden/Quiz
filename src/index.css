@@ -79,6 +79,12 @@ h1 {
     gap: 0.5rem;
 }
 
+.bottom-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .summary-page {
     display: flex;
     flex-direction: column;
@@ -106,6 +112,7 @@ h1 {
     .app-content-wrapper {
         width: 600px;
     }
+
     .question-card {
         text-align: center;
         padding: 1rem 4rem;
@@ -115,7 +122,7 @@ h1 {
     .options-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem; 
+        gap: 0.5rem;
     }
 
     .summary-page {

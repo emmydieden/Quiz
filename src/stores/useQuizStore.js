@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { create } from "zustand";
 
 
@@ -100,11 +100,16 @@ const useQuizStore = create((set, get) => ({
     set((state) => {
       if (state.currentQuestionIndex + 1 === state.questions.length) {
         // If the current question is the last one, mark the quiz as over
-        return { quizOver: true };
+
+        //CHANGE: this is put in to make the 5 second timer to work. 
+        // return { quizOver: true };
       } else {
+
+        // CHANGE: this is put in to make the 5 second timer to work, 
+        // state.reset();
         // Otherwise, move to the next question
         return { 
-          currentQuestionIndex: state.currentQuestionIndex + 1
+          currentQuestionIndex: state.currentQuestionIndex + 1,
         } 
       }
     });
@@ -121,12 +126,17 @@ const useQuizStore = create((set, get) => ({
     });
   },
 
+  // STRECH TRY-------------------------------
+  // This is variables and functions for the game time counter.
+  // Seconds is a variable that holds the time, finished helps us know if the finish button has been pressed.
+  // Counter holds the function declared inside the startCounter function. 
   seconds: 0,
   finished: false,
   counter: null,
 
   startCounter: () => {
     set({finished: false});
+    //using setInterval to create timer; setting the seconds state to + 1 every second. 
     const counter = setInterval(() => {
       set((state) => ({ seconds: state.seconds +1}));
     }, 1000);
@@ -135,10 +145,26 @@ const useQuizStore = create((set, get) => ({
   },
 
   stopCounter: () => {
+    // getting the counter function, clears the interval again.
     const { counter } = get();
     clearInterval(counter);
     set({ finished: true});
     console.log("hejcounter!");
+  },
+
+  // ANOTHER COUNTER TIMER going down from 5 seconds. 
+  // THIS IS NOT FINISHED!!
+  // isTimeOver is boolean that tells us if time is up, declared in Timer.jsx.
+  // Reset is also a function from Timer.jsx, that we get here to be able to use it anywhere. 
+  isTimeOver: false,
+  reset: null,
+
+  resetTime: (resetFunc) => {
+    set({reset: resetFunc })
+  },
+
+  timeOver: () => {
+    set({isTimeOver: true });
   },
 
 }));

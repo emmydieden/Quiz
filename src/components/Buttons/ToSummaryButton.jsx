@@ -12,7 +12,6 @@ export const ToSummaryButton = () => {
     stopCounter();
   }
 
-  
   return (
     <div className="button-container finish-button">
     <Link to="/summary">

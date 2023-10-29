@@ -24,7 +24,7 @@ export const CurrentQuestionZustand = () => {
             
             <div className="question-heading-wrapper">
                 <h1>{question.questionHeading}</h1>
-                {/* <p>Question {currentQuestionIndex + 1}/5</p> */}
+                <p>Question {currentQuestionIndex + 1}/5</p>
             </div>
             <img src={question.imageURL} alt="Sunrise" />
             <p>{question.questionText}</p>

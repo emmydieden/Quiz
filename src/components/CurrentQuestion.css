@@ -21,5 +21,11 @@ img {
     border-radius: 0.3rem;
     align-self: center;
 }
+.question-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
 

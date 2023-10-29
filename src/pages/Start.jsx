@@ -1,10 +1,10 @@
-import React from "react"
+
 import useQuizStore from "../stores/useQuizStore"
 import { Link } from "react-router-dom"
 
 export const Start = () => {
     
-    const { startCounter } = useQuizStore();
+  const { startCounter } = useQuizStore();
 
   return (
     <div className="start-page">
