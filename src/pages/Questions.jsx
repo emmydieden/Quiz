@@ -27,7 +27,7 @@ export const Questions = () => {
                 <CurrentOptions />
             </div>
             <div className="bottom-content-wrapper">
-                <p>Your time: {seconds} seconds</p>
+                
                 {/* Conditionally render either the "Summary" button or the "Next" button */}
                 {quizOver || currentQuestionIndex === totalQuestions - 1 ? (
                     // If the quiz is over or it's the last question, show the "Summary" button
